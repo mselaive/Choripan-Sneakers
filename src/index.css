@@ -293,6 +293,9 @@ header ul li a{
     font-weight: 600;
     
 }
+
+
+
 .testmar{
     margin-top: 130px;
 }
@@ -498,6 +501,7 @@ header ul li a{
     max-width: 1000px;
     margin: 0 auto;
     font-family:Helvetica, sans-serif;
+    text-align: center;
     color: #1a202c;
 }
 .detalles .price{
