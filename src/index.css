@@ -495,7 +495,7 @@ header ul li a{
     padding: 1rem 1rem;
     border: none;
     outline: 0;
-    background-color: #3033d3;
+    background-color: #08a05c;
     font-size: 1.6rem;
     color: white;
     font-weight: 600;
@@ -534,6 +534,7 @@ header ul li a{
 }
 .detalles img{
     min-height: 300px;
+    max-height: 700px;
     object-fit: contain;
     margin-top:  -7rem;
     z-index: -1;
