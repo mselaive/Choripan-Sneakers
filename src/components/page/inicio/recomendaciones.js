@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import LoremIpsum from 'react-lorem-ipsum';
 import data from '../../../Data2';
 import axios from 'axios';
 
@@ -8,6 +7,30 @@ export default function Recomendaciones() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [randomImages, setRandomImages] = useState([]);
 
+  // Conjunto de frases aleatorias
+  const randomOpinions = [
+    "Estas zapatillas son increíbles, las recomiendo totalmente.",
+    "Nunca antes había tenido unas zapatillas tan cómodas como estas.",
+    "El diseño de estas zapatillas es simplemente asombroso, ¡me encantan!",
+    "¡No puedo creer lo bien que se sienten estas zapatillas al caminar!",
+    "Son perfectas para cualquier ocasión, definitivamente valen la pena.",
+    "Me sorprendió la durabilidad y calidad de estas zapatillas, son geniales.",
+    "Estoy muy contento con mi compra, estas zapatillas superaron mis expectativas.",
+    "Cada paso con estas zapatillas es como caminar sobre nubes, muy cómodas.",
+    "El estilo y la funcionalidad se combinan perfectamente en estas zapatillas.",
+    "Recomiendo estas zapatillas a cualquiera que busque comodidad y calidad.",
+    "Estas zapatillas ofrecen un ajuste perfecto y gran comodidad.",
+    "La calidad de construcción de estas zapatillas es impresionante.",
+    "¡Me encanta la versatilidad y el estilo único de estas zapatillas!",
+    "Las zapatillas son ideales para largas caminatas, son muy cómodas.",
+    "Estoy sorprendido por lo ligeras que son estas zapatillas, ¡increíble!",
+    "El diseño innovador de estas zapatillas destaca a primera vista.",
+    "Las mejores zapatillas que he tenido, son duraderas y funcionales.",
+    "Estas zapatillas elevan mi rendimiento en cada actividad deportiva.",
+    "Son perfectas para cualquier clima, mantienen mis pies secos siempre.",
+    "Recomendaría estas zapatillas a todos, son simplemente extraordinarias."
+  ];
+
   useEffect(() => {
     const fetchRandomUsers = async () => {
       try {
@@ -15,7 +38,7 @@ export default function Recomendaciones() {
         const usersWithStars = response.data.results.map(user => ({
           ...user,
           randomStarCount: Math.floor(Math.random() * (5 - 3 + 1)) + 3,
-          loremIpsumText: generateLoremIpsum(),
+          randomOpinion: randomOpinions[Math.floor(Math.random() * randomOpinions.length)]
         }));
         setUserList(usersWithStars);
       } catch (error) {
@@ -34,14 +57,6 @@ export default function Recomendaciones() {
 
     setRandomImages(randomImagesData);
   }, [userList]);
-
-  const generateLoremIpsum = () => {
-    // Use the react-lorem-ipsum function to generate Lorem Ipsum text
-    return LoremIpsum({
-      p: 1,  // Number of paragraphs
-      avgWordsPerSentence: 7,  // Average words per sentence
-    });
-  };
 
   const renderStars = (count, userIndex) => {
     const stars = [];
@@ -87,7 +102,7 @@ export default function Recomendaciones() {
             <p><b>Nombre:</b> {`${userData.name.first} ${userData.name.last}`}</p>
             <p><b>Correo:</b>  {userData.email}</p>
             <p><b>Ubicación:</b>  {`${userData.location.city}, ${userData.location.country}`}</p>
-            <p><b>Opinión:</b> {userData.loremIpsumText}</p>
+            <p><b>Opinión:</b> {userData.randomOpinion}</p>
             <div className='stars-container'>
               {renderStars(5, currentIndex + index)}
             </div>
