@@ -497,13 +497,19 @@ header ul li a{
     padding: 1rem 1rem;
     border: none;
     outline: 0;
-    background-color: #08a05c;
+    background-color: #3033d3;
     font-size: 1.6rem;
     color: white;
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
 }
+
+.detalles button:hover{
+    background-color: #f1365b;
+    color: white;
+}
+
 .detalles .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
