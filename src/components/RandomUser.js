@@ -49,7 +49,7 @@ export const RandomUser = () => {
         <box-icon
           key={i}
           name='star'
-          type={i < userList[userIndex].randomStarCount ? 'solid' : ''}
+          type={i < userList[userIndex].randomStarCount ? 'solid' : 'regular'}
         />
       );
     }
