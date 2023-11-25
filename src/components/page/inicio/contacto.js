@@ -18,16 +18,20 @@ export default function Contacto() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío de los datos del formulario, por ejemplo, enviar a una API o hacer alguna acción con los datos
+    // Aquí puedes manejar el envío de los datos del formulario
     console.log(formData);
-    // Restablecer el estado del formulario después de enviar los datos (puedes ajustar esta lógica según tus necesidades)
+    // Restablecer el estado del formulario después de enviar los datos
     setFormData({
       name: '',
       email: '',
       subject: '',
       description: ''
     });
+
+    // Muestra un mensaje de confirmación simple usando window.alert()
+    window.alert('Enviado!');
   };
+
 
   
 

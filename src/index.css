@@ -226,6 +226,7 @@ header ul li a{
     border: 6px solid transparent;
     cursor: pointer;
     border-radius: 5px;
+    padding-bottom: 1rem;
 }
 .producto:hover{
     border: 6px solid #08a05c57;
@@ -444,7 +445,7 @@ header ul li a{
     width: 60px;
     height: 80px;
     fill:  crimson;
-    margin-top: 2rem;
+    margin-top: 1.4rem;
 }
 .carrito__footer{
     text-align: center;
