@@ -68,9 +68,9 @@ export const RandomUser = () => {
               <img className='UserProfile' src={userData.picture.large} alt={`User ${index + 1}`} />
               <img src={randomImages[currentIndex + index]} alt={`Random Image ${index + 1}`} style={{ maxWidth: '50%' }} />
             </div>
-            <p>Name: {`${userData.name.first} ${userData.name.last}`}</p>
+            <p>Nombre: {`${userData.name.first} ${userData.name.last}`}</p>
             <p>Email: {userData.email}</p>
-            <p>Location: {`${userData.location.city}, ${userData.location.country}`}</p>
+            <p>Locación : {`${userData.location.city}, ${userData.location.country}`}</p>
             <div className='stars-container'>
               {renderStars(5, currentIndex + index)}
             </div>
