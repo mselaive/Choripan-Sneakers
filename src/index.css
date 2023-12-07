@@ -761,3 +761,54 @@ recomendacion-container {
     margin-top: 0.5rem;
     margin-bottom: 0.5
 }
+
+@media (max-width: 768px) {
+    .usuarios {
+        flex-direction: column; /* Apilar usuarios en pantallas más pequeñas */
+        align-items: center;
+    }
+
+
+    .usuario2 {
+        width: 100%; /* Ocupar todo el ancho en pantallas más pequeñas */
+        margin-bottom: 20px; /* Añadir espacio entre usuarios */
+    }
+
+    .usuario2 img {
+        width:15rem;
+        height:auto; /* Hacer que la imagen ocupe todo el ancho del contenedor */
+    }
+
+    .texto-nosotros {
+        text-align: justify; /* Alinear texto justificado en pantallas más pequeñas */
+        
+    }
+    .p-test{
+        font-size:100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .usuarios {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 1rem; /* Reduce the gap between items */
+    }
+
+    .usuario {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%; /* Make each user take full width */
+    }
+
+    .imagenes-container {
+        margin-left: 0; /* Remove margin on smaller screens */
+    }
+
+    .imagenes-container img {
+        max-width: 100%; /* Ensure images don't overflow on smaller screens */
+    }
+    .usuario:nth-child(n + 2) {
+        display: none;
+    }
+
+}
